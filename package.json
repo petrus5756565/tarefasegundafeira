@@ -1,0 +1,19 @@
+{
+  "name": "redes-sociais",
+  "version": "1.0.0",
+  "description": "Página de redes sociais com ícones interativos e responsivos",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "npx http-server src -p 3000 -c-1",
+    "start": "npx http-server src -p 3000"
+  },
+  "keywords": [
+    "redes-sociais",
+    "instagram",
+    "twitter",
+    "youtube",
+    "responsive"
+  ],
+  "author": "",
+  "license": "MIT"
+}

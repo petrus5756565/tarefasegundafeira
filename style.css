@@ -1,0 +1,187 @@
+/* Variáveis CSS raiz com cores e estilos principais */
+:root {
+  color-scheme: dark;
+  color: #0f172a;
+  background: #f8fafc;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* Reset de estilos padrão do navegador */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos do corpo da página */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px; /* Ajustado para mobile */
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+}
+
+/* Container principal - responsivo */
+.page-shell {
+  width: min(100%, 960px);
+}
+
+/* Cabeçalho com título */
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Título principal */
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  /* Responsividade para telas pequenas */
+  word-break: break-word;
+}
+
+/* Parágrafo de descrição */
+p {
+  margin: 12px auto 0;
+  max-width: 520px;
+  color: #475569;
+  /* Melhor legibilidade em mobile */
+  font-size: 0.95rem;
+}
+
+/* Grid de cards - responsivo para diferentes tamanhos de tela */
+.social-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Ajuste para mobile */
+  padding: 0 8px;
+}
+
+/* Card individual com ícone e botão */
+.social-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  padding: 20px 16px; /* Ajustado para mobile */
+  text-align: center;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.06);
+  /* Animação suave ao passar o mouse */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover no card */
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12);
+}
+
+/* Caixa que envolve o ícone com quadro transparente */
+.icon-box {
+  width: 160px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border: 2px solid rgba(15, 23, 42, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  /* Responsividade em telas pequenas */
+}
+
+/* Imagem do ícone */
+.icon-box img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain; /* Garante que a imagem não saia da caixa */
+}
+
+/* Texto abaixo do ícone */
+.icon-caption {
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Botão de ação */
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  /* Animação de transição suave */
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito de hover no botão */
+.social-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* Efeito de ativo quando clica */
+.social-button:active {
+  transform: translateY(0);
+}
+
+/* Media query para dispositivos móveis (telas menores que 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .social-grid {
+    gap: 16px;
+    grid-template-columns: 1fr; /* Uma coluna em mobile */
+    padding: 0;
+  }
+
+  .social-card {
+    padding: 16px 12px;
+  }
+
+  .icon-box {
+    width: 140px;
+    height: 180px;
+  }
+
+  .icon-box img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* Media query para tablets (480px a 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query para desktop (acima de 768px) */
+@media (min-width: 768px) {
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
